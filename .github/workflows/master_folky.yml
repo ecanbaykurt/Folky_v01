@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - Folky
 on:
   push:
     branches:
-      - master_folky
+      - master
   workflow_dispatch:
 
 jobs:
@@ -65,9 +65,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D5E7778AAB2742C5B940D8D8C5F881F2 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_4DF70573AD6347DE8A5C6B29E1EACC54 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_21211183D8914338B083AB497EACD1DD }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_FFA23B9AAD084C308733D59C937FE5D0 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A1866288669842D6A83DEF8DDF965D79 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7D7A4FBA9E1042E992C3D6D49C7D16BC }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
